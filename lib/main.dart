@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:test_codecov/second-page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -77,20 +76,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   setState(() {
                     showText = !showText;
                   });
-                  print(showText);
                 },
                 child: const Text('Exibir texto')),
             Row(
-                key: Key('row_string'),
+                key: const Key('row_string'),
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [Text(_changeText(showText))]),
             ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const SecondPage()));
-                },
+                onPressed: () {},
                 child: const Text('Próxima página')),
           ],
         ),
